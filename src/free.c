@@ -6,13 +6,13 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 15:40:05 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/04 16:35:51 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/06 15:21:07 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "malloc.h"
 
-void		free(void *addr)
+void	free(void *addr)
 {
 	t_blk	*blk;
 	t_blk	*blk_pre;

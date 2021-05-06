@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:03:51 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/04 17:36:31 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/06 13:37:05 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ t_blk	*find_free_block(t_heap_type type, size_t size)
 	if (g_heap == NULL)
 	{
 		blk = create_heap(NULL, size);
-		g_heap = (void*)blk - BLK_SIZE;
+		g_heap = (void *)blk - BLK_SIZE;
 		return (blk);
 	}
 	heap = g_heap;
@@ -62,8 +62,8 @@ t_blk	*find_free_block(t_heap_type type, size_t size)
 	{
 		if (heap->type == type)
 		{
-			if ((blk = scrolling_blocks(heap->start, size)) == NULL \
-					&& heap->next == NULL)
+			blk = scrolling_blocks(heap->start, size);
+			if (blk == NULL && heap->next == NULL)
 				return (create_heap(heap, size));
 			if (blk != NULL)
 				return (blk);
@@ -75,7 +75,7 @@ t_blk	*find_free_block(t_heap_type type, size_t size)
 	return (NULL);
 }
 
-t_bool		check_blk(t_heap *heap, t_blk *blk)
+t_bool	check_blk(t_heap *heap, t_blk *blk)
 {
 	t_blk	*actual_blk;
 
@@ -89,7 +89,7 @@ t_bool		check_blk(t_heap *heap, t_blk *blk)
 	return (FALSE);
 }
 
-t_bool			is_our_blok(void *addr)
+t_bool	is_our_blok(void *addr)
 {
 	t_heap	*heap;
 	void	*first_addr;
@@ -108,4 +108,3 @@ t_bool			is_our_blok(void *addr)
 	}
 	return (FALSE);
 }
-

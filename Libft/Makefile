@@ -6,7 +6,7 @@
 #    By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/03 15:07:00 by fnancy            #+#    #+#              #
-#    Updated: 2021/05/04 14:20:50 by fnancy           ###   ########.fr        #
+#    Updated: 2021/05/06 12:22:14 by fnancy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_memalloc ft_memccpy ft_memchr ft_
 ft_memcpy ft_memdel ft_memmove ft_memset ft_putchar ft_putchar_fd ft_putendl ft_putendl_fd ft_putnbr ft_putnbr_fd \
 ft_putstr ft_putstr_fd ft_strcat ft_strchr ft_strclr ft_strcmp ft_strcpy ft_strdel ft_strdup ft_strequ ft_striter \
 ft_striteri ft_strjoin ft_strlcat ft_strlen ft_strmap ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_strnequ \
-ft_strnew ft_strnstr ft_strrchr ft_strsplit ft_strstr ft_strsub ft_tolower ft_toupper 
+ft_strnew ft_strnstr ft_strrchr ft_strsplit ft_strstr ft_strsub ft_tolower ft_toupper ft_itoa_hex
 
 all: $(NAME)
 

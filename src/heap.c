@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:03:38 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/04 17:36:34 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/06 15:20:32 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ t_blk	*create_heap(t_heap *pre_hip, size_t size)
 	const size_t	heap_size = get_heap_size(size);
 
 	addr = mmap(
-		0, heap_size,
-		PROT_READ | PROT_WRITE,
-		MAP_ANON | MAP_PRIVATE,
-		-1, 0);
+			0, heap_size, \
+			PROT_READ | PROT_WRITE, \
+			MAP_ANON | MAP_PRIVATE, \
+			-1, 0);
 	if (addr == MAP_FAILED)
 		return (NULL);
 	heap = init_heap(pre_hip, addr, heap_size, size);
@@ -53,8 +53,8 @@ t_blk	*create_heap(t_heap *pre_hip, size_t size)
 
 void	free_heap(t_blk *blk)
 {
-	t_heap *heap;
-	t_heap *pre_heap;
+	t_heap	*heap;
+	t_heap	*pre_heap;
 
 	if (blk->prev == NULL && blk->next == NULL)
 	{

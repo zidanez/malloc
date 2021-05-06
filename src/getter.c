@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:06:34 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/04 16:10:35 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/06 13:48:52 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,13 @@ t_heap_type	get_heap_type(size_t size)
 	if (size < SMALL_MAX_ALLOC)
 		return (SMALL);
 	return (LARGE);
+}
+
+char	*get_heap_name(int type)
+{
+	if (type == TYNY)
+		return ("TINY");
+	else if (type == SMALL)
+		return ("SMALL");
+	return ("LARGE");
 }

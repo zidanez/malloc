@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:10:48 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/03 16:06:30 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/05 14:20:51 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ void			*ft_memccpy(void *restrict dst, const void *restrict src, \
 				int c, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memchr(const void *s, int c, size_t n);
+void			ft_put_addr(void *addr);
+char			*ft_lltoa_base(long long nb, int base);
+void			ft_itoa_hex(uint64_t n, int is_upcase, char *buff);
 int				ft_strequ(char const *s1, char const *s2);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_ilen(int c);
