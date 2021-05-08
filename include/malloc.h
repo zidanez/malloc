@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 15:36:29 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/06 15:17:36 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/08 16:19:15 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 # define TINY_SIZE	(PAGE_SIZE * 4)
 # define SMALL_SIZE	(PAGE_SIZE * 16)
-# define LARGE_SIZE(size) ((size + HEAP_SIZE + (BLK_SIZE * 2)))
+# define LARGE_SIZE(size) ((size + HEAP_SIZE))
 
 # define GET_BLOCK(addr) ((t_blk *)(addr - BLK_SIZE))
 # define TYNY_MAX_ALLOC (TINY_SIZE / 128)
@@ -83,8 +83,8 @@ t_blk			*find_free_block(t_heap_type type, size_t size);
 t_bool			check_blk(t_heap *heap, t_blk *blk);
 t_bool			is_our_blok(void *addr);
 
-void			show_alloc_mem(const t_heap *heap);
-void			show_alloc_mem_ex(const t_heap *heap);
+void			show_alloc_mem();
+void			show_alloc_mem_ex();
 
 void			print_block_info(t_blk	*blk);
 
