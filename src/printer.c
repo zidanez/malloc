@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:33:51 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/08 15:06:16 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/15 12:31:57 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	print_block_more_info(t_blk *blk)
 	ft_putstr("\n");
 }
 
-void	show_alloc_mem_ex()
+void	show_alloc_mem_ex(void)
 {
 	t_blk	*blk;
 	t_heap	*heap;
@@ -60,7 +60,7 @@ void	show_alloc_mem_ex()
 	}
 }
 
-void	show_alloc_mem()
+void	show_alloc_mem(void)
 {
 	t_blk	*blk;
 	size_t	total;

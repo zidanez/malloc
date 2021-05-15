@@ -6,7 +6,7 @@
 /*   By: fnancy <fnancy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 15:39:46 by fnancy            #+#    #+#             */
-/*   Updated: 2021/05/08 15:10:48 by fnancy           ###   ########.fr       */
+/*   Updated: 2021/05/15 12:31:39 by fnancy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,3 @@ void	*malloc(size_t size)
 	blk = find_free_block(type_heap, size);
 	return (allocation_block(blk, size));
 }
-
